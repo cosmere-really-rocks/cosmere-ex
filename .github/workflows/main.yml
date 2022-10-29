@@ -33,10 +33,6 @@ jobs:
       uses: Borales/actions-yarn@v2.1.0
       with:
         cmd: install
-    - name: Test
-      uses: Borales/actions-yarn@v2.1.0
-      with:
-        cmd: test:unit
     - name: Build for production
       uses: Borales/actions-yarn@v2.1.0
       with:
