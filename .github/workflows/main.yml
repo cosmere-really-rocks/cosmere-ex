@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy result to site'
+        required: false
+        default: 'false'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.OS }}-build-${{ env.cache-name }}-
+          ${{ runner.OS }}-build-
+          ${{ runner.OS }}-
+    - name: Install dependencies
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        cmd: install
+    - name: Test
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        cmd: test:unit
+    - name: Build for production
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        cmd: build
+
+    - name: Deploy
+      uses: maxheld83/ghpages@v0.2.1
+      if: (github.event_name == 'push' && github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, '[deploy]'))
+        || (github.event_name == 'workflow_dispatch' && github.event.inputs.deploy == 'true')
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
+        BUILD_DIR: dist/
