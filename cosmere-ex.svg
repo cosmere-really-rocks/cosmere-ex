@@ -105,10 +105,10 @@ text{
 	<path fill="#FFF" d="M983,774h120v50H983V774z"/>
 	<path class="边框" d="M983,522h120v304H983V522z"/>
 	<text transform="matrix(1 0 0 1 1000 558)" class="fs30">精研５</text>
-	<text transform="matrix(1 0 0 1 1005 609)" class="fs30">N刷 4</text>
-	<text transform="matrix(1 0 0 1 1000 659)" class="fs30">通读３</text>
-	<text transform="matrix(1 0 0 1 1000 709)" class="fs30">看过２</text>
-	<text transform="matrix(1 0 0 1 1000 759)" class="fs30">耳闻１</text>
-	<text transform="matrix(1 0 0 1 998 809)" class="fs30">没印象</text>
+	<text transform="matrix(1 0 0 1 1000 609)" class="fs30">Ｎ刷４</text>
+	<text transform="matrix(1 0 0 1 1000 659)" class="fs30">读完３</text>
+	<text transform="matrix(1 0 0 1 1000 709)" class="fs30">在读２</text>
+	<text transform="matrix(1 0 0 1 1000 759)" class="fs30">听过１</text>
+	<text transform="matrix(1 0 0 1 1000 809)" class="fs30">没印象</text>
 </g>
 </svg>
