@@ -63,7 +63,7 @@ const getTextFromHTMLFile = (filename)=>{
 };
 
 const defaultText = `1234567890:`;
-const text = defaultText + getTextFromHTMLFile('html/index.html') + getTextFromHTMLFile('china-ex.svg');
+const text = defaultText + getTextFromHTMLFile('html/index.html') + getTextFromHTMLFile('cosmere-ex.svg');
 const fontURL = generateFontURL(`JiaLiDaYuanJF`,text);
 
 

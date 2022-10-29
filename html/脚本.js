@@ -60,7 +60,7 @@ const $ = (名,元素 = 文档) => 元素.querySelector(名);
 
 const 字体名 = '字体';
 const 背景色 = '#efb4b4';
-const 本地存储等级们钥匙 = 'china-ex-levels';
+const 本地存储等级们钥匙 = 'cosmere-ex-levels';
 const 保存文件名 = `[神奇海螺][中国制霸].png`;
 
 const 宽 = 1134;
@@ -195,7 +195,7 @@ const 地址变图像元素 = (地址,回调)=>{
     添加事件监控(图,加载,_=>设置延时(_=>回调(图),千 / 二));
     图[源] = 地址;
 };
-const 日志 = _=>(新建图())[源] = `https://lab.magiconch.com/api/china-ex/log?levels=${获取所有省等级们字符串()}&r=${文档[来源]}`;
+const 日志 = _=>(新建图())[源] = `https://lab.magiconch.com/api/cosmere-ex/log?levels=${获取所有省等级们字符串()}&r=${文档[来源]}`;
 
 const 保存图像 = _=>{
     如何做爱元素[设置属性](运行中属性,真);

@@ -47,10 +47,10 @@ const Less = require('less');
 
 const reader = async _=>{
 
-    let xml = readFileSync('china-ex.svg','utf8');
+    let xml = readFileSync('cosmere-ex.svg','utf8');
 
     xml = replaceSVG(xml);
-    writeFileSync('china-ex-fixed.svg',xml);
+    writeFileSync('cosmere-ex-fixed.svg',xml);
 
 
     if(!existsSync('dist')) mkdirSync('dist');
